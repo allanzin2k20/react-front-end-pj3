@@ -1,8 +1,12 @@
-function App() {
+import React from "react";
+import Oi from "./Oi"
+
+const App = () => {
   return (
-
-
-  <p>hello mike</p>
+    <>
+          <oi/>
+  <p>breningaymeplayer</p>
+    </>
   );
 }
 
