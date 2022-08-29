@@ -1,12 +1,17 @@
 import React from "react";
-import Oi from "./Oi"
+import Home from "./pages/Home"
+import Contact from "./pages/Contact";
+import {Routes, Route} from 'react-router-dom'
+
 
 const App = () => {
   return (
-    <>
-          <oi/>
-  <p>breningaymeplayer</p>
-    </>
+<Routes>
+  <Route path="/" element={<Home/>}/>
+  <Route path="/contact" element={<Contact/>}/>
+</Routes>    
+
+
   );
 }
 
