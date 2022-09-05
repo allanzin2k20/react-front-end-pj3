@@ -1,6 +1,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import './contact.css';
+import './Contact.css';
 import { Link } from 'react-router-dom'
 import MainContainer from '../components/MainContainer'
 

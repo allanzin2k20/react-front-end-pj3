@@ -1,6 +1,6 @@
 .Header{
     background: rgb(0, 0, 0);
-    height:30px;
+    height:40px;
     
 }
 
@@ -10,5 +10,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color:  white
+
+}
+
+.Header .logoType{
+    align-items: center;
+    display: flex;
+    color: white;
+
 
 }
