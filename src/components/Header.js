@@ -1,16 +1,24 @@
 import './Header.css'
-import {MdOutlinePhonelinkRing} from 'react-icons/md'
+import { FaReact as ReactLogo } from 'react-icons/fa'
+import { NavLink, Link } from 'react-router-dom'
+
 
 const Header = () => {
   return (
     <header className='Header'>
       <div className='container'>
-        <div className='logoType'>
-        <MdOutlinePhonelinkRing />
-          <h1>Logo</h1>
-
-        </div>
-        <div>Menu</div>
+        <Link to='/'>
+          <div className='logotype'>
+            <ReactLogo className='icon-logo'/>
+            <h1>CelAqui</h1>
+          </div>
+        </Link>
+        <nav>
+          <ul>
+            <li><NavLink to='/'>Home</NavLink></li>
+            <li><NavLink to='/contact'>Hooks</NavLink></li>
+          </ul>
+        </nav>
       </div>
     </header>
   )
