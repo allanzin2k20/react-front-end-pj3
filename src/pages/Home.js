@@ -10,9 +10,9 @@ const Home = () => {
   const [users, setUsers] = useState([])
 
   const requestUsers = async () => {
-    const response = await fetch('https://api.github.com/users')
-    const data = await response.json()
-    setUsers(data)
+    const response = await fetch('http://localhost/pj3/ifsp-php-api/user/list')
+    const result = await response.json()
+    setUsers(result.data)
   }
 
   useEffect(() => {
@@ -21,29 +21,29 @@ const Home = () => {
 
   return (
     <>
-      <Header />
+    <Header />
 
-      <MainContainer>
-        <h1>Home</h1>
-        <p>Lista usuários API Git Hub:</p>
+    <MainContainer>
+      <h1>Home</h1>
+      <p>Lista usuários API Git Hub:</p>
 
 
-        {
-          users.length === 0
-          ? <p>Nenhum usuário</p>
-          : users.map((user) => { 
-            return (
-              <CardComment key={user.id} avatarUrl={user.avatar_url} name={user.login}>
-                {user.html_url}
-              </CardComment>
-            )
-          })
-        }
+      {
+        users.length === 0
+        ? <p>Nenhum usuário</p>
+        : users.map((user) =>  
+          (
+            <CardComment key={user.id} avatarUrl={user.avatar} name={user.name} id={user.id}>
+            {user.email}
+          </CardComment>
+          )
+        )
+      }
 
-      </MainContainer>
-      <Footer />   
-    </>
-  )
+    </MainContainer>
+    <Footer />   
+  </>
+)
 }
 
 export default Home
